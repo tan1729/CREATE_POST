@@ -1,0 +1,35 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Graphite
+    network: sepolia
+    source:
+      address: "0x022414c23f3b5610d6126daae789728203948605"
+      abi: Graphite
+      startBlock: 7003165
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - CommentAdded
+        - PostCreated
+        - PostDisliked
+        - PostLiked
+      abis:
+        - name: Graphite
+          file: ./abis/Graphite.json
+      eventHandlers:
+        - event: CommentAdded(uint256,uint256,address,string)
+          handler: handleCommentAdded
+        - event: PostCreated(uint256,address,string)
+          handler: handlePostCreated
+        - event: PostDisliked(uint256,address)
+          handler: handlePostDisliked
+        - event: PostLiked(uint256,address)
+          handler: handlePostLiked
+      file: ./src/graphite.ts
