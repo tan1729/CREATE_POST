@@ -1,0 +1,48 @@
+/* Add Tailwind CSS imports */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+.create-post {
+  transition: all 0.3s ease;
+}
+
+.create-post:hover {
+  transform: translateY(-2px);
+}
+
+.post {
+  transition: all 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-2px);
+}
+
+/* Button animations */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Loading animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}

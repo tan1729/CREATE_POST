@@ -1,0 +1,4 @@
+/* frontend/Graphite-frontend/src/styles/test.module.css */
+.test {
+    @apply bg-blue-500 text-white p-4;
+  }
