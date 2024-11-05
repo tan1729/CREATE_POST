@@ -1,0 +1,38 @@
+type CommentAdded @entity(immutable: true) {
+  id: Bytes!
+  postId: BigInt! # uint256
+  commentId: BigInt! # uint256
+  commenter: Bytes! # address
+  text: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PostCreated @entity(immutable: true) {
+  id: Bytes!
+  Graphite_id: BigInt! # uint256
+  author: Bytes! # address
+  contentURI: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PostDisliked @entity(immutable: true) {
+  id: Bytes!
+  Graphite_id: BigInt! # uint256
+  disliker: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PostLiked @entity(immutable: true) {
+  id: Bytes!
+  Graphite_id: BigInt! # uint256
+  liker: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

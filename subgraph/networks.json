@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "Graphite": {
+      "address": "0x022414c23f3b5610d6126daae789728203948605",
+      "startBlock": 7003165
+    }
+  }
+}
